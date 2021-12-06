@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <div>
-    <div>
+    <div v-bind:style="{backgroundColor: count < 0 ? 'red':'white'}">
       {{ count }}
     </div>
     <button @click="incrementCount">+</button>
@@ -12,10 +12,11 @@
 export default {
   data() {
     return {
-      count: 0,
+      count: 0, 
     }
   },
   methods: {
+    
     incrementCount:  function() {
       this.count++
     },
@@ -24,6 +25,8 @@ export default {
       this.count--
     },
 
+    
+  　
   }
 }
 </script>
